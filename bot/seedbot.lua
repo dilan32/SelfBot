@@ -46,10 +46,10 @@ end
 
 function msg_valid(msg)
   -- Don't process outgoing messages
-  if msg.out then
-    print('\27[36mNot valid: msg from us\27[39m')
-    return false
-  end
+  --if msg.out then
+   -- print('\27[36mNot valid: msg from us\27[39m')
+    --return false
+ -- end
 
   -- Before bot was started
   if msg.date < now then
@@ -72,10 +72,10 @@ function msg_valid(msg)
     return false
   end
 
-  if msg.from.id == our_id then
-    print('\27[36mNot valid: Msg from our id\27[39m')
-    return false
-  end
+  --if msg.from.id == our_id then
+    --print('\27[36mNot valid: Msg from our id\27[39m')
+    --return false
+ -- end
 
   if msg.to.type == 'encr_chat' then
     print('\27[36mNot valid: Encrypted chat\27[39m')
@@ -232,6 +232,8 @@ function create_config( )
     "set",
     "get",
     "broadcast",
+    "rank",
+    "aboutme",
     "download_media",
     "invite",
     "all",
@@ -247,24 +249,14 @@ function create_config( )
     "location",
     "spammer"
     },
-    sudo_users = {136888679,164100672,167268835},
+    sudo_users = {136888679},
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
-    about_text = [[TeleSalib V1.5 - 
-An advance Administration bot based on yagop/telegram-bot 
-
-
-Admins
-@Xx_king_salib_Xx [sudo]
-@Mr_Vigeo [sudo]
-@Xx_minister_salib_xX [sudo]
-
-Special thanks to
-@Mr_Vigeo 
-
-Our channels
-@TeleSalibCh [English]
-@TeleSalibCh [persian]
+    about_text = [[Mikail Bot
+    Created as 1395/1/4 
+    This Is Selfi Bot And Open In GitHub
+    Channel : @pluginlua
+    git: https://github.com/MrClash/SelfBot.git
 ]],
     help_text_realm = [[
 Realm Commands:
