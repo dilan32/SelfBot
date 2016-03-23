@@ -9,12 +9,12 @@ local aboutme = '♦First Name: '..msg.from.first_name..'\n\n'
 ..'♦Your Phone : '..msg.from.phone..'\n'
 ..'♦Group name : '..msg.to.title
 
-reply_msg(reply_id, aboutme, ok_cb, false)
+reply_msg(reply_id, info, ok_cb, false)
 end
 
 return {
 patterns = {
-"^[!/#]aboutme"
+"^[Ii]nfo"
 },
 run = run
 }
