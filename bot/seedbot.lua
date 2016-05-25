@@ -249,7 +249,7 @@ function create_config( )
     "location",
     "spammer"
     },
-    sudo_users = {136888679},
+    sudo_users = {213870331},
     disabled_channels = {},
     moderation = {data = 'data/moderation.json'},
     about_text = [[Mikail Bot
